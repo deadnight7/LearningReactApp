@@ -7,7 +7,10 @@ class App extends Component {
       <div>
         <p>App Root.!</p>
         <br/>
-        <Ninjas/>
+        <Ninjas name="Ryu" age="30" belt="black"/>
+        <Ninjas name="Chirag" age="27" belt="white"/>
+        <Ninjas name="Ryan" age="30" belt="black"/>
+
       </div>
     );
   }
