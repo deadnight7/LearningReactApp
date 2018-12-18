@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import Ninjas from './Ninjas';
-class App extends Component {
+
+class Ninjas extends Component {
   
   render() {
     return (
       <div>
-        <p>App Root.!</p>
-        <br/>
-        <Ninjas/>
+      <p>Ninja</p>
+      <div>Name : Ryu</div>
+      <div>Age : 25</div>
+      <div>Belt : Black</div>
       </div>
     );
   }
 }
 
-export default App;
+export default Ninjas;
 
 /**
  * <!--
