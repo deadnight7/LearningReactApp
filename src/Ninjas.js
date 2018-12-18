@@ -6,15 +6,21 @@ class Ninjas extends Component {
     console.log(this.props);
     
     //Destruturing props
-    const {name , age, belt} = this.props;
+    const {ninjas} = this.props;
+    const ninjaList = ninjas.map(ninja => {
+      return (
+        <div key={ninja.id}>
+          <hr/>
+          <p>Ninja</p>
+          <div>Name : {ninja.name}</div>
+          <div>Age : {ninja.age}</div>
+          <div>Belt : {ninja.belt}</div>
+        </div>
+      );
+    });
     return (
-      <div>
-      <hr/>
-      <p>Ninja</p>
-
-      <div>Name : {name}</div>
-      <div>Age : {age}</div>
-      <div>Belt : {belt}</div>
+      <div className="NinjaList">
+        { ninjaList }
       </div>
     );
   }

@@ -2,15 +2,20 @@ import React, { Component } from 'react';
 import Ninjas from './Ninjas';
 class App extends Component {
   
+  state = {
+    ninjas : [
+      {name: "Ryu", age : 30, belt : "black", id: 1 },
+      {name: "Chirag", age : 30, belt : "Yellow", id: 2 },
+      {name: "Crystal", age : 30, belt : "black", id: 3 }
+    ]
+  }
   render() {
     return (
       <div>
         <p>App Root.!</p>
         <br/>
-        <Ninjas name="Ryu" age="30" belt="black"/>
-        <Ninjas name="Chirag" age="27" belt="white"/>
-        <Ninjas name="Ryan" age="30" belt="black"/>
-
+        <Ninjas ninjas={this.state.ninjas} />
+        
       </div>
     );
   }
