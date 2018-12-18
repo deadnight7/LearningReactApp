@@ -1,10 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  
+  state = {
+    name : "React",
+    age : 27
+  }
+   
+  setName = (e) => {
+    this.setState ({
+      name : e.target.value
+    });
+  }
+  formSubmit = (e) =>{
+    //Submit form
+    e.preventDefault();
+    console.log("Form Submitted : "+this.state.name);
+  }
   render() {
     return (
+      <div>
+        My name is {this.state.name}..!
+        <form onSubmit={this.formSubmit}>
+          <input type="text" onChange={this.setName}/>
+          <input type="submit" />
+        </form>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+/**
+ * <!--
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -21,8 +51,5 @@ class App extends Component {
           </a>
         </header>
       </div>
-    );
-  }
-}
-
-export default App;
+      -->
+ */
